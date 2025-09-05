@@ -92,7 +92,10 @@ const sliderData = [
     role: "Graphic Designer",
     img: "assests/slider/f.jpg",
   },
-  { name: "Anjali Shrestha", role: "UX Designer", img: "assests/slider/g.jpg" },
+  { name: "Anjali Shrestha", 
+    role: "UX Designer", 
+    img: "assests/slider/g.jpg", 
+  },
   {
     name: "Ramesh Thapa",
     role: "Frontend Developer",
@@ -103,13 +106,19 @@ const sliderData = [
     role: "Backend Developer",
     img: "assests/slider/i.jpg",
   },
-  { name: "Kiran Lama", role: "QA Engineer", img: "assests/slider/j.jpg" },
+  { name: "Kiran Lama", 
+    role: "QA Engineer", 
+    img: "assests/slider/j.jpg", 
+  },
   {
     name: "Suman Adhikari",
     role: "Product Owner",
     img: "assests/slider/k.jpg",
   },
-  { name: "Maya Rai", role: "Business Analyst", img: "assests/slider/l.jpg" },
+  { name: "Maya Rai", 
+    role: "Business Analyst", 
+    img: "assests/slider/l.jpg",
+  },
 ];
 
 // Create slider elements
@@ -306,7 +315,6 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
-
 // this is a function for togglebar open
 
 const hamIcon = document.querySelector(".ham-icon");
@@ -328,5 +336,3 @@ hamIcon.addEventListener("click", () => {
     icon.classList.add("fa-bars"); // back to hamburger
   }
 });
-
-
