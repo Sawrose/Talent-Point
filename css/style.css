@@ -60,7 +60,7 @@ body {
     display: flex;
     align-items: center;
     margin-left: auto;
-    gap: 60px;
+    gap: 50px;
     /* gap between links and buttons */
 }
 
@@ -110,7 +110,7 @@ body {
 
 body.menu-open {
     overflow: hidden;
- 
+
 }
 
 @media (max-width: 1024px) {
@@ -142,14 +142,11 @@ body.menu-open {
 
     .nav-together {
         display: none;
-        /* hide nav by default */
         flex-direction: column;
         position: fixed;
-        top: 100px;
-        /* below navbar */
+        top: 70px;
         left: 0;
         background-color: #fff;
-        /* white background */
         width: 100%;
         height: 100vh;
         padding: 20px;
@@ -213,9 +210,13 @@ body.menu-open {
 .hero-section {
     display: flex;
     justify-content: space-between;
-    padding: 60px;
-    gap: 60px;
+    padding: 5%;
+    /* responsive padding */
+    gap: 4%;
+    /* responsive gap */
     align-items: center;
+    flex-wrap: wrap;
+    /* stack if viewport is too small */
 }
 
 .left-content {
@@ -251,12 +252,14 @@ body.menu-open {
 
 .image-box {
     display: flex;
-    gap: 65px;
+    gap: 12%;
+    flex-wrap: wrap;
 }
 
 .image-item {
     position: relative;
-    width: 250px;
+    width: 40%;
+    max-width: 250px;
     border-radius: 10px;
     overflow: visible;
 }
@@ -270,7 +273,7 @@ body.menu-open {
     border-radius: 10px;
 }
 
-/*Label on first image */
+/* Label on first image */
 .label {
     position: absolute;
     top: 12px;
@@ -281,15 +284,16 @@ body.menu-open {
     border-radius: 6px;
     font-size: 15px;
     font-weight: 200;
-    line-height: 1.5;
+    line-height: 1.8;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 #hide-text {
+    display: flex;
+    height: 100%;
     overflow: hidden;
-    height: 35px;
 }
 
 .gray-text {
@@ -365,6 +369,30 @@ body.menu-open {
     color: rgb(183, 179, 179);
 }
 
+@media (max-width: 1024px) {
+    .right-content {
+        display: none;
+        /* hide images, badge, label */
+    }
+
+    .left-content {
+        flex: 1;
+        text-align: left;
+    }
+
+    .left-content h1 {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    .left-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 /* hero section ends */
 
 
@@ -384,7 +412,7 @@ body.menu-open {
 #gray-stripe {
     width: 100%;
     background-color: #f1efef;
-    padding: 10px 110px;
+    padding: 10px 0; /* remove large fixed padding */
     position: relative;
     overflow: hidden;
     white-space: nowrap;
@@ -394,27 +422,6 @@ body.menu-open {
     height: 140px;
 }
 
-#gray-stripe .left-block {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 110px;
-    height: 110%;
-    background: linear-gradient(to right, #f1efef 90%, transparent);
-    z-index: 2;
-    pointer-events: none;
-}
-
-#gray-stripe .right-block {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 110px;
-    height: 100%;
-    background: linear-gradient(to left, #f1efef 90%, transparent);
-    z-index: 2;
-    pointer-events: none;
-}
 
 .stripe-content {
     display: inline-block;
@@ -422,7 +429,6 @@ body.menu-open {
     user-select: none;
     transition: transform 0.3s ease;
     will-change: transform;
-    /* Start at translateX(0) */
     transform: translateX(0);
 }
 
@@ -437,9 +443,40 @@ body.menu-open {
     -webkit-user-drag: none;
 }
 
+#gray-stripe img:last-child {
+    margin-right: 0;
+}
+
 #gray-stripe img:hover {
     filter: grayscale(0%);
     transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #gray-stripe img {
+        width: 22%;      /* 4 images */
+        margin-right: 2%;
+        filter: grayscale(100%);
+    }
+    #gray-stripe img:last-child {
+        margin-right: 0;
+    }
+    #gray-stripe .left-block,
+    #gray-stripe .right-block {
+        display: none; /* hide gradient blocks */
+    }
+}
+
+@media (max-width: 768px) {
+    #gray-stripe img {
+        width: 45%;      /* 2 images */
+        margin-right: 5%;
+        filter: none;    /* remove grayscale */
+    }
+    #gray-stripe img:last-child {
+        margin-right: 0;
+    }
 }
 
 /* gray stripe ends */

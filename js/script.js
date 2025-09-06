@@ -92,10 +92,7 @@ const sliderData = [
     role: "Graphic Designer",
     img: "assests/slider/f.jpg",
   },
-  { name: "Anjali Shrestha", 
-    role: "UX Designer", 
-    img: "assests/slider/g.jpg", 
-  },
+  { name: "Anjali Shrestha", role: "UX Designer", img: "assests/slider/g.jpg" },
   {
     name: "Ramesh Thapa",
     role: "Frontend Developer",
@@ -106,19 +103,13 @@ const sliderData = [
     role: "Backend Developer",
     img: "assests/slider/i.jpg",
   },
-  { name: "Kiran Lama", 
-    role: "QA Engineer", 
-    img: "assests/slider/j.jpg", 
-  },
+  { name: "Kiran Lama", role: "QA Engineer", img: "assests/slider/j.jpg" },
   {
     name: "Suman Adhikari",
     role: "Product Owner",
     img: "assests/slider/k.jpg",
   },
-  { name: "Maya Rai", 
-    role: "Business Analyst", 
-    img: "assests/slider/l.jpg",
-  },
+  { name: "Maya Rai", role: "Business Analyst", img: "assests/slider/l.jpg" },
 ];
 
 // Create slider elements
